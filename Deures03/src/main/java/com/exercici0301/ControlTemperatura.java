@@ -9,7 +9,7 @@ public class ControlTemperatura {
     public ControlTemperatura(String nomZona, double temperatura) {
         this.nomZona = nomZona;
         this.temperatura = temperatura;
-        this.temperaturaTotal = temperatura +temperaturaTotal;
+        temperaturaTotal += temperatura;
         comptadorZones++;
     }
 

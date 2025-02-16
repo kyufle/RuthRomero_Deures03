@@ -1,4 +1,6 @@
 package com.exercici0302;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Prestec {
     Llibre llibre;
@@ -36,11 +38,11 @@ public class Prestec {
         this.dataRetorn = dataRetorn; 
     }
 
-    public boolean estaEnTermini() { // mirar si tiene que ser con la fecha de hoy
-        String[] dataPrestecSenseEspais = dataPrestec.split("/");
-        String[] dataRetornSenseEspais = dataRetorn.split("/");
-
-        return false;
+    public boolean estaEnTermini() {
+        DateTimeFormatter dataFormateada = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate dataRetornFormateada = LocalDate.parse(dataRetorn,dataFormateada);
+        LocalDate hoy = LocalDate.now();
+        return !hoy.isAfter(dataRetornFormateada);
     }
 }
 

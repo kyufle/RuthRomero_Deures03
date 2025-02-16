@@ -38,10 +38,13 @@ public class Estudiant {
 
     // Mètodes públics estàtics
     public static int getComptadorEstudiants() {
-        return -1;
+        return comptadorEstudiants;
     }
 
     public static boolean hiHaCapacitat() {
+        if (CAPACITAT_MAXIMA>comptadorEstudiants){
+            return true;
+        }
         return false;
     }
 }

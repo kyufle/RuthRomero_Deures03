@@ -14,8 +14,7 @@ public class Prestec {
     }
 
     public Llibre getLlibre() {
-        Llibre rst = new Llibre("", new Autor("", ""), 0);
-        return rst;
+        return llibre;
     }
 
     public void setLlibre(Llibre llibre) {
@@ -23,7 +22,7 @@ public class Prestec {
     }
 
     public String getDataPrestec() {
-        return this.dataPrestec;
+        return dataPrestec;
     }
 
     public void setDataPrestec(String dataPrestec) {
@@ -31,7 +30,7 @@ public class Prestec {
     }
 
     public String getDataRetorn() {
-        return this.dataRetorn;
+        return dataRetorn;
     }
 
     public void setDataRetorn(String dataRetorn) {

@@ -20,9 +20,8 @@ public class Llibre {
         this.titol = titol;
     }
 
-    public Autor getAutor() { //verificar que esto este bien 
-        Autor rst = new Autor("", "");
-        return rst;
+    public Autor getAutor() {
+        return autor;
     }
 
     public void setAutor(Autor autor) {
@@ -30,7 +29,7 @@ public class Llibre {
     }
 
     public int getAnyPublicacio() {
-        return this.anyPublicacio;
+        return anyPublicacio;
     }
 
     public void setAnyPublicacio(int anyPublicacio) {

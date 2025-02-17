@@ -2,7 +2,7 @@ package com.exercici0302;
 
 public class Autor {
     String nom;
-    String nacionalitat;
+    public String nacionalitat;
 
     public Autor(String nom, String nacionalitat) {
         this.nom = nom;

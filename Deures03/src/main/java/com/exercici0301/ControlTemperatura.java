@@ -13,8 +13,12 @@ public class ControlTemperatura {
         comptadorZones++;
     }
 
+    public String getNomZona() {
+        return nomZona;
+    }
+    
     public double getTemperatura() {
-        return 0.0;
+        return temperatura;
     }
 
     public void ajustaTemperatura(double novaTemperatura) {
@@ -24,6 +28,9 @@ public class ControlTemperatura {
     }
 
     public static double getTemperaturaMitjana() {
+        if (comptadorZones == 0){
+            return 0.0;
+        }
         return temperaturaTotal/comptadorZones;
     }
 }

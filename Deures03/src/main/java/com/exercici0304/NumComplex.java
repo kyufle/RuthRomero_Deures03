@@ -32,7 +32,7 @@ public class NumComplex {
     }
 
     public NumComplex conjugat() {
-        NumComplex rst = new NumComplex(this.partImaginaria, -this.partReal);
+        NumComplex rst = new NumComplex(-this.partReal,this.partImaginaria);
         return rst;
     }
 
@@ -55,16 +55,18 @@ public class NumComplex {
     public static NumComplex multiplica(NumComplex a, NumComplex b) {
         double real = a.partImaginaria * b.partImaginaria - a.partReal * b.partReal;
         double imaginari = a.partReal * b.partImaginaria + a.partImaginaria * b.partReal;
-        return new NumComplex(real, imaginari);
+        return new NumComplex(imaginari, real);
     }
 
     public static NumComplex divideix(NumComplex a, NumComplex b) {
         double denominador = b.partReal * b.partReal + b.partImaginaria * b.partImaginaria;
+
         if (denominador == 0) {
             throw new ArithmeticException("No es pot dividir per zero");
         }
-        double real = (a.partReal * b.partReal + a.partImaginaria * b.partImaginaria) / denominador;   // Cambié el orden
-        double imaginari = (a.partImaginaria * b.partReal - a.partReal * b.partImaginaria) / denominador; // Cambié el orden
+        double real = (a.partReal * b.partReal + a.partImaginaria * b.partImaginaria) / denominador;  
+        double imaginari = (a.partImaginaria * b.partReal - a.partReal * b.partImaginaria) / denominador;
         return new NumComplex(real, imaginari);
+
     }    
 }

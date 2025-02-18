@@ -22,8 +22,8 @@ public class ControlTemperatura {
     }
 
     public void ajustaTemperatura(double novaTemperatura) {
-        temperaturaTotal -= temperatura;
-        novaTemperatura = temperatura;
+        temperaturaTotal -= this.temperatura;
+        this.temperatura= novaTemperatura;
         temperaturaTotal += novaTemperatura;
     }
 

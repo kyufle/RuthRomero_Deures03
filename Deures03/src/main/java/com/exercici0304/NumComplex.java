@@ -4,9 +4,10 @@ public class NumComplex {
     private double partReal;
     private double partImaginaria;
 
-    public NumComplex(double partImaginaria, double partReal) {
-        this.partImaginaria = partImaginaria;
+    public NumComplex(double partReal, double partImaginaria) {
         this.partReal = partReal;
+        this.partImaginaria = partImaginaria;
+        
     }
 
     //Getters i setters
@@ -32,7 +33,7 @@ public class NumComplex {
     }
 
     public NumComplex conjugat() {
-        NumComplex rst = new NumComplex(-this.partReal,this.partImaginaria);
+        NumComplex rst = new NumComplex(this.partReal,-this.partImaginaria);
         return rst;
     }
 
@@ -53,9 +54,9 @@ public class NumComplex {
     }
 
     public static NumComplex multiplica(NumComplex a, NumComplex b) {
-        double real = a.partImaginaria * b.partImaginaria - a.partReal * b.partReal;
+        double real = a.partReal * b.partReal-a.partImaginaria * b.partImaginaria;
         double imaginari = a.partReal * b.partImaginaria + a.partImaginaria * b.partReal;
-        return new NumComplex(imaginari, real);
+        return new NumComplex(real, imaginari);
     }
 
     public static NumComplex divideix(NumComplex a, NumComplex b) {

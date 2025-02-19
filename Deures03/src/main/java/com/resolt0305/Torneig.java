@@ -15,8 +15,8 @@ public class Torneig {
 
     public void competir() {
         for (Participant p : participants) {
-            if (p instanceof Competidor) {
-                ((Competidor) p).competir();
+            if (p instanceof Competidor competidor) {
+                competidor.competir();
             }
         }
     }
